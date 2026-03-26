@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h2>Cor por Resultado</h2>
+
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <button id="btn" onclick="somar()">Somar</button>
+
+    <p id="res"></p>
+
+    <script>
+        function somar() {
+            let n1 = Number(document.getElementById("n1").value);
+            let n2 = Number(document.getElementById("n2").value);
+            let total = n1 + n2;
+
+            document.getElementById("res").innerText = total;
+
+            let btn = document.getElementById("btn");
+
+            if (total % 2 === 0) {
+                btn.style.background = "blue";
+            } else {
+                btn.style.background = "green";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

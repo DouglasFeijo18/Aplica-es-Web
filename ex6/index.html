@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h2>Tabuada</h2>
+
+    <input type="number" id="num">
+    <button onclick="tabuada()">Gerar</button>
+
+    <pre id="res"></pre>
+
+    <script>
+        function tabuada() {
+            let num = Number(document.getElementById("num").value);
+            let texto = "";
+
+            for (let i = 1; i <= 10; i++) {
+                texto += num + " x " + i + " = " + (num * i) + "\n";
+            }
+
+            document.getElementById("res").innerText = texto;
+        }
+    </script>
+
+</body>
+
+</html>
